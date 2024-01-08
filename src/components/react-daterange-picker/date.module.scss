@@ -1,0 +1,32 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+
+.datePickerContainer {
+  border: 1px solid $borderColor;
+  width: 100%;
+  align-items: center;
+  background-color: white;
+  padding: 8px 10px;
+  @media (max-width: $xxs) {
+    max-width: 288px;
+  }
+  .contentDivContainer {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .contentDiv {
+    font-size: 14px;
+    color: $subtile;
+    width: 260px;
+  }
+  & .iconDiv {
+    padding-left: 30px;
+  }
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}

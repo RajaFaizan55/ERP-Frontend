@@ -1,0 +1,419 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.navLink {
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.attendance {
+  font-size: 18px;
+  font-weight: 500;
+  color: #6e6d6d;
+  display: none;
+  margin-top: 20px;
+  @media (max-width: $sm) {
+    display: block;
+  }
+}
+
+.imgBack {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  cursor: pointer;
+  @media (max-width: $sm) {
+    display: none;
+  }
+}
+.imgSmall {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  cursor: pointer;
+  display: none;
+  @media (max-width: $sm) {
+    display: block;
+  }
+}
+.heightFixed {
+  min-height: 360px;
+  position: sticky;
+  top: 0;
+  background-color: #fafafa;
+  z-index: 1;
+  border-bottom: 1px solid $borderColor;
+}
+
+.header {
+  padding: 0px 131px 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media (max-width: $md) {
+    margin-top: 40px;
+  }
+  @media (max-width: $sm) {
+    padding: 0px 15px 15px 15px;
+  }
+
+  @media (max-width: $lg) {
+    flex-direction: column;
+  }
+  .employeeDetails {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 40px;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+    .detail {
+      display: flex;
+      flex-direction: column;
+      padding-left: 25px;
+      @media (max-width: $sm) {
+        margin-top: 0px;
+        padding-left: 20px;
+        margin-bottom: 15px;
+      }
+      & .iconDiv {
+        flex: 1;
+        padding-left: 10px;
+        @media (max-width: $sm) {
+          display: none;
+        }
+        img {
+          width: 18px;
+          height: 20px;
+          cursor: pointer;
+          position: relative;
+          top: 2px;
+
+          &:nth-of-type(1) {
+            margin-right: 10px;
+            width: auto;
+          }
+        }
+      }
+
+      h3 {
+        font-size: 30px;
+        font-weight: 400;
+        color: $primary;
+        @media (max-width: $sm) {
+          font-size: 18px;
+          font-weight: 500;
+        }
+      }
+      h5 {
+        font-size: 14px;
+        font-weight: 400;
+        color: $secondary;
+        @media (max-width: $sm) {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+  .chart {
+    display: flex;
+    align-items: center;
+    margin-top: -70px;
+    @media (max-width: $lg) {
+      margin-top: 20px;
+    }
+    @media (max-width: $extra-small) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .chartDiv {
+      position: relative;
+      z-index: 1;
+      width: 360px;
+      @media (max-width: $lg) {
+        left: -55px;
+      }
+      @media (max-width: $xxs) {
+        left: 0px;
+        width: 100%;
+      }
+      h2 {
+        font-size: 22px;
+        font-weight: 500;
+        color: $primary;
+        text-align: center;
+        margin-bottom: 20px;
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+      .innerChatDiv {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        top: 20px;
+        left: 7px;
+        z-index: -1;
+        @media (max-width: 660px) {
+          top: 0px;
+        }
+        .value {
+          font-size: 70px;
+          color: $header;
+          font-weight: 900;
+          @media (max-width: $lg) {
+            font-size: 50px;
+          }
+          @media (max-width: $md) {
+            font-size: 40px;
+          }
+        }
+      }
+    }
+    .flex1 {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      padding-right: 10px;
+      @media (max-width: $sm) {
+        padding-right: 0px;
+      }
+      .legendShape {
+        width: 16px;
+        height: 16px;
+        @media (max-width: $sm) {
+          height: 14px;
+          width: 14px;
+        }
+      }
+      .legend1 {
+        font-size: 16px;
+        color: $subtile;
+        margin-left: 20px;
+        width: 200px;
+        margin-bottom: 0;
+        @media (max-width: $sm) {
+          font-size: 14px;
+          width: 90px;
+        }
+      }
+      .legend {
+        font-size: 16px;
+        color: $subtile;
+        margin-bottom: 0;
+        @media (max-width: $sm) {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+.tabs {
+  position: relative;
+  background-color: #fafafa;
+
+  .tabsDatePickerDiv {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    background-color: #fafafa;
+
+    .datePickerDiv {
+      width: 350px;
+      margin: 10px 10px 10px 0;
+    }
+
+    @media (max-width: 1170px) {
+      flex-direction: column;
+      .datePickerDiv {
+        align-self: flex-end;
+        margin: 0px 10px 10px 0;
+
+        @media (max-width: 840px) {
+          margin: 10px 10px 10px 0;
+        }
+      }
+    }
+  }
+}
+
+// overview
+.grid {
+  @include gridTwo(30, 100);
+  padding: 20px 40px;
+  @media (max-width: $sm) {
+    padding: 2px 15px;
+  }
+  .left {
+    h3 {
+      color: $header;
+      font-size: 28px;
+      font-weight: 500;
+      @media (max-width: $sm) {
+        font-size: 18px;
+      }
+    }
+    p {
+      font-size: 18px;
+      font-weight: 500;
+      color: $header;
+      margin-top: 20px;
+      @media (max-width: $sm) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-top: 14px;
+      }
+      span {
+        text-transform: capitalize;
+        color: $subtile;
+        font-weight: 200;
+      }
+    }
+    .flex {
+      display: flex;
+      padding-top: 10px;
+      align-items: flex-start;
+      @media (max-width: $sm) {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 0px;
+      }
+      .div1 {
+        margin-right: 55px;
+        @media (max-width: $sm) {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+}
+.education {
+  padding: 20px 40px;
+  @media (max-width: $sm) {
+    padding: 20px 15px;
+  }
+  h3 {
+    color: $header;
+    font-size: 28px;
+    font-weight: 500;
+    @media (max-width: $sm) {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+// payroll
+
+.payroll {
+  padding: 30px 0px;
+  h3 {
+    color: $header;
+    font-size: 28px;
+    font-weight: 500;
+    @media (max-width: $sm) {
+      font-size: 18px;
+    }
+  }
+  .grid2 {
+    @include gridTwo(0, 100);
+    @media (max-width: $md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .div2 {
+      p {
+        font-size: 18px;
+        font-weight: 500;
+        color: $header;
+        margin-top: 20px;
+        @media (max-width: $sm) {
+          font-size: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        span {
+          color: $subtile;
+          font-weight: 200;
+        }
+      }
+    }
+  }
+}
+.namingDiv {
+  min-width: 250px;
+  @media (max-width: $sm) {
+    width: 100%;
+  }
+}
+
+.tableMargin {
+  margin-top: 20px;
+  @media (max-width: $sm) {
+    margin-top: 10px;
+  }
+}
+
+.attendanceBorder {
+  @media (max-width: $sm) {
+    border-top: 1px solid #d9d9d9;
+  }
+}
+.loaderDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  top: 52px;
+  height: calc(100% - 52px);
+  background-color: #fafafa;
+  z-index: 2000;
+  .loadingStyle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-color: #57b993;
+    border-top-color: transparent;
+  }
+}
+
+.datePickerPosition {
+  position: absolute;
+  width: 352px;
+  right: 20px;
+  @media (max-width: 1170px) {
+    margin-top: 70px;
+  }
+  @media (max-width: $xxs) {
+    right: 3px;
+    width: 300px;
+  }
+}
+
+.attendanceTableDown {
+  padding: 0px 10px;
+  @media (max-width: 1170px) {
+    padding-top: 45px;
+  }
+}

@@ -1,0 +1,28 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.main {
+  padding: 0px 30px;
+  .mainFirst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .application {
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  .mainNote {
+    margin-top: 25px;
+    .note {
+      font-style: italic;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .noteInfo {
+      font-size: 14px;
+      margin-top: 15px;
+    }
+  }
+}

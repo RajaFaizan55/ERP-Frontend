@@ -1,0 +1,216 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.headerDiv {
+  position: sticky;
+  top: 0px;
+  background-color: #fafafa;
+  z-index: 20000;
+}
+
+.expenseDetailTableHeight {
+  height: calc(100vh - 217px);
+  @media (max-width: $md) {
+    height: calc(100vh - 182px);
+  }
+}
+.AddExpenseBtnDiv {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 149px;
+  height: 47px;
+  .btnFixDiv {
+    position: fixed;
+  }
+}
+
+// explore
+.explore {
+  padding: 0px 10px;
+  display: flex;
+  width: 100%;
+
+  @media (max-width: $md) {
+    flex-direction: column;
+  }
+  .table {
+    width: 50%;
+    @media (max-width: $md) {
+      width: 100%;
+    }
+    .tableHeight {
+      max-height: calc(100vh - 166px);
+      @media (max-width: $md) {
+        max-height: calc(100vh - 182px);
+      }
+    }
+  }
+  .chartDiv {
+    padding-left: 20px;
+    width: 50%;
+    @media (max-width: $md) {
+      width: 100%;
+      margin-top: 30px;
+    }
+    .datePicker {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .date {
+        margin-top: 0px;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+// modal
+.modalWrapper {
+  max-width: 950px !important;
+  padding: 0px !important;
+
+  .modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img {
+      margin-right: 20px;
+      margin-top: -25px;
+    }
+  }
+
+  .add {
+    @include gridTwo(30, 70);
+
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: $sm) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    padding: 20px 50px;
+    @media (max-width: $md) {
+      padding: 20px 20px;
+    }
+    @media (max-width: $sm) {
+      padding: 0px 20px 20px;
+    }
+
+    .radio {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      .sec {
+        margin-left: 50px;
+      }
+    }
+    .selectDiv {
+      @media (max-width: $sm) {
+        margin-top: -15px;
+      }
+    }
+  }
+
+  .note {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    label {
+      font-size: 14px;
+      color: #6e6d6d;
+      margin-bottom: 10px;
+      font-weight: 500;
+      text-transform: capitalize;
+      color: #6e6d6d;
+    }
+
+    textarea {
+      border: 1px solid #d9d9d9;
+      color: #6e6d6d;
+      border-radius: 3px;
+      height: 100%;
+      padding: 10px;
+      outline: none;
+      resize: none;
+      &::placeholder {
+        color: #d6d9d9;
+      }
+    }
+  }
+  .addExpense {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .inputMarginClass {
+      margin-top: 0px;
+    }
+  }
+  .webBtnDiv {
+    display: flex;
+    justify-content: center;
+    .btn {
+      padding: 12px 100px !important;
+      margin: 30px 0px;
+      width: 330px;
+      height: 51px;
+    }
+  }
+  .mobileBtnDiv {
+    display: none;
+    padding: 0 20px 20px;
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .mobileBtn {
+      position: relative;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.remarksDiv {
+  margin-top: 35px;
+  .label {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: $header;
+    text-transform: capitalize;
+    display: block;
+  }
+}
+
+.errorMessage {
+  color: $danger;
+  font-size: 12px;
+  position: absolute;
+  bottom: -17px;
+}
+
+.noDataFoundDiv {
+  height: calc(100vh - 156px);
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.loaderDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: #fafafa;
+  z-index: 200;
+  .loadingStyle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-color: #57b993;
+    border-top-color: transparent;
+  }
+}

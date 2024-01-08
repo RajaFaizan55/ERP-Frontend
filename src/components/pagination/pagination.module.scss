@@ -1,0 +1,68 @@
+@import 'styles/_breakpoints.scss';
+
+.containerDiv {
+  overflow-x: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 10px;
+  @media (max-width: $md) {
+    top: 2px;
+  }
+
+  .pagination {
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+    height: 42px;
+
+    .breakLink {
+      pointer-events: none;
+      margin: 0px 2px;
+      color: #8b8b8b !important;
+    }
+
+    .active {
+      background-color: #57b993;
+      border: 1px solid #57b993 !important;
+      color: white !important;
+    }
+    .pageLink {
+      color: #8b8b8b;
+      width: 100%;
+      height: 99%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    .pageLink :hover {
+      text-decoration: none;
+    }
+    .pageItem :hover {
+      text-decoration: none;
+      color: #8b8b8b;
+    }
+    .pageItem {
+      margin: 0px 5px;
+      font-weight: 500;
+      font-size: 12px;
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+      border: 1px solid #bebebe;
+      border-radius: 0%;
+
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+    }
+
+    .previousNext {
+      background-color: transparent;
+      margin: 0px 5px;
+      cursor: pointer;
+    }
+  }
+}

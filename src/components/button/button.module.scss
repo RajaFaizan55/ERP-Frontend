@@ -1,0 +1,64 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.btnEl {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  background-color: $btn;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: $md) {
+    box-shadow: none;
+    height: 35px;
+    border-radius: 3px;
+  }
+  &:hover {
+    background-color: $btn;
+  }
+  .img {
+    margin-left: 5px;
+    height: 20px;
+    width: 20px;
+  }
+  .btnTitle {
+    color: white;
+    font-size: 18px;
+    font-family: Roboto;
+    @media (max-width: $md) {
+      font-weight: 500;
+      font-size: 14px;
+      margin-right: 0px;
+    }
+  }
+}
+
+.btn2 {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  background: #57b993;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.12), 0px 6px 6px rgba(0, 0, 0, 0.24);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  @media (max-width: $md) {
+    display: flex;
+  }
+}

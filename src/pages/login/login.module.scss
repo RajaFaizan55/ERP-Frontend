@@ -1,0 +1,278 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.downMd {
+  display: block;
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.upMd {
+  display: none;
+  @media (max-width: $md) {
+    display: block;
+  }
+}
+
+// web
+
+.loginMain {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url('https://raw.githubusercontent.com/sbutt3716/sprintx-logos/master/public/images/loginBG.png');
+  width: 100vw;
+  height: 100vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.loginOverlay {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loginCardParent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginCard {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border-radius: 8px;
+  color: white;
+  margin: 0;
+  box-shadow: 0 1px 5px #50505076;
+}
+
+.loginContent {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 112px;
+}
+
+.loginInput {
+  border: 0;
+  border-bottom: 1px solid gray;
+  background-color: transparent;
+  padding-bottom: 3px;
+  font-size: 13px;
+  width: 100%;
+  color: #dcdcdc;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.loginInput:-webkit-autofill,
+.loginInput:-webkit-autofill:hover,
+.loginInput:-webkit-autofill:focus,
+.loginInput:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: $white;
+}
+
+.loginForm {
+  margin-top: 32px;
+}
+
+.loginLabel {
+  color: #dcdcdc;
+  font-size: 13px;
+}
+.img {
+  position: absolute;
+  top: 20px;
+  right: 2px;
+  height: 15px;
+  cursor: pointer;
+}
+.loginFPassContainer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.loginForgetPass {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #dcdcdc;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #57b993;
+}
+
+.loginSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff12;
+  border-radius: 2px;
+  border: 0;
+  width: 100%;
+  margin-top: 33px;
+  height: 40px;
+  margin-bottom: 12px;
+  padding: 8px 80px;
+  color: white;
+  cursor: pointer;
+  &:hover {
+    background-color: #ffffff25;
+  }
+
+  .btnLoader {
+    margin: 0 !important;
+  }
+}
+
+// mobile
+
+.bg {
+  display: none;
+  @media (max-width: $md) {
+    display: flex;
+  }
+  position: absolute;
+  top: 0;
+  background-color: $bg;
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0px 100px;
+
+  @media (max-width: $sm) {
+    padding: 20px 50px;
+  }
+  @media (max-width: $xxs) {
+    padding: 20px 15px;
+  }
+
+  .logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: formLogo 1s linear 3.5s forwards;
+    visibility: hidden;
+  }
+  form {
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h4 {
+      margin-top: 63px;
+      font-family: Roboto;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+      color: #6e6d6d;
+      @media (max-width: 350px) {
+        margin-top: 20px;
+      }
+    }
+
+    .loginDiv {
+      margin-top: 37px;
+      .secondDiv {
+        margin-top: 20px;
+        p {
+          font-size: 12px;
+          line-height: 14px;
+          color: #8b8b8b;
+          text-align: end;
+          margin-top: 7px;
+        }
+      }
+    }
+    .btn {
+      width: 210px;
+      height: 35px;
+      margin-top: 90px;
+      display: flex;
+      @media (max-width: 350px) {
+        margin-top: 20px;
+      }
+    }
+    animation: formAnimation 1s linear 4.5s forwards;
+    visibility: hidden;
+  }
+  // animation: formDiv 2s linear forwards;
+}
+
+.opacityLogo {
+  position: relative;
+  z-index: 1;
+  visibility: visible;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg;
+  overflow-x: hidden;
+  &::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    background-color: $bg;
+    animation: beforeDiv 2s linear forwards;
+  }
+  animation: opacityImg 1s linear 2s forwards;
+}
+
+@keyframes beforeDiv {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+@keyframes opacityImg {
+  from {
+    visibility: visible;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes formLogo {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 1;
+  }
+
+  to {
+    visibility: visible;
+  }
+}
+
+@keyframes formAnimation {
+  from {
+    visibility: hidden;
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  to {
+    visibility: visible;
+  }
+}

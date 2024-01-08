@@ -1,0 +1,58 @@
+@import '../../styles/_breakpoints.scss';
+@import '../../styles/_colors.scss';
+
+.generalSettingsInputContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 15px;
+  label {
+    font-size: 14px;
+    color: $header;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #6e6d6d;
+  }
+
+  .select {
+    color: $primary;
+    border-radius: 3px;
+    padding: 10px 8px;
+    width: 100%;
+    cursor: pointer;
+    // text-transform: capitalize;
+    height: 45px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    option {
+      font-size: 16px;
+      color: $header;
+      // text-transform: capitalize;
+    }
+    &::placeholder {
+      color: #d6d9d9;
+      // text-transform: capitalize;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+.img {
+  right: 9px;
+  top: 17px;
+  height: 10px;
+  cursor: pointer;
+  width: 11px;
+  position: absolute;
+  pointer-events: none;
+}
+
+.errorMessage {
+  color: $danger;
+  font-size: 12px;
+  position: absolute;
+  bottom: -17px;
+}

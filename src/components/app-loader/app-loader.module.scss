@@ -1,0 +1,19 @@
+.container {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .loaderClass {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-left-color: #57b993;
+    border-right-color: #57b993;
+    border-bottom-color: #57b993;
+    border-top-color: transparent;
+  }
+}

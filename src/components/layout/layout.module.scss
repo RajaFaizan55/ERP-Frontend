@@ -1,0 +1,43 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.downMd {
+  display: block;
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+
+.upMd {
+  display: none;
+  @media (max-width: $md) {
+    display: block;
+  }
+}
+
+.layoutWrapper {
+  header {
+    height: calc(100vh - 21px);
+    border-radius: 8px;
+    overflow-y: auto;
+    position: fixed;
+    overflow-x: hidden;
+    margin: 10px 0 0 10px;
+    background: $primary;
+    top: 0;
+    &::-webkit-scrollbar {
+      background: transparent; /* make scrollbar transparent */
+      width: 0px;
+    }
+    @media (max-width: $md) {
+      height: calc(100vh - 67px);
+      top: 57px;
+      margin-bottom: 0;
+      position: absolute;
+      transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+      background: #57b993;
+      border-radius: 0px;
+    }
+  }
+}

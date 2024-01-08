@@ -1,0 +1,122 @@
+@import 'styles/_breakpoints.scss';
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+
+.taxCalculationTable {
+  height: calc(100vh - 214px);
+  @media (max-width: $md) {
+    height: calc(100vh - 182px);
+  }
+}
+.taxSlabTableHeight {
+  height: calc(100vh - 217px);
+  @media (max-width: $md) {
+    height: calc(100vh - 146px);
+  }
+}
+.addTaxBtnDiv {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 149px;
+  height: 42px;
+  @media (max-width: $md) {
+    display: none;
+  }
+
+  .addTaxBtnChildDiv {
+    position: fixed;
+  }
+}
+
+.mobileAddTaxBtnDiv {
+  display: none;
+  @media (max-width: $md) {
+    display: block;
+  }
+}
+
+// Modal
+.modalWrapper {
+  max-width: 950px !important;
+  padding: 0px !important;
+  position: relative;
+  @media (max-width: $xs) {
+    height: 90vh;
+  }
+  .modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img {
+      margin-right: 20px;
+      margin-top: -25px;
+    }
+  }
+
+  .add {
+    @include gridTwo(8, 80);
+    padding: 20px 50px;
+    @media (max-width: $md) {
+      padding: 20px;
+    }
+    .label {
+      font-size: 11px;
+      color: $header;
+
+      text-transform: capitalize;
+    }
+
+    .radio {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      .sec {
+        margin-left: 50px;
+      }
+    }
+  }
+  .webBtnDiv {
+    display: flex;
+    justify-content: center;
+    @media (max-width: $md) {
+      display: none;
+    }
+    .btn {
+      padding: 12px 100px;
+      margin: 40px 0px;
+      width: 330px;
+      height: 51px;
+    }
+  }
+  .mobileBtnDiv {
+    display: none;
+    margin: 20px;
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .mobileBtn {
+      position: relative;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.loaderDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: #fafafa;
+  z-index: 200;
+  .loadingStyle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-color: #57b993;
+    border-top-color: transparent;
+  }
+}

@@ -1,0 +1,123 @@
+@import 'styles/_colors.scss';
+
+.mainDiv {
+  position: fixed;
+  background-color: transparent;
+  inset: 0;
+}
+
+.filterContainer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  width: 240px;
+  top: 53px;
+  z-index: 50000;
+  background: $white;
+  border: 1px solid $borderColor;
+  border-radius: 5px;
+}
+
+.sort {
+  display: flex;
+  color: $primary;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid $borderColor;
+}
+
+.sortTitle {
+  display: flex;
+  //   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+}
+
+.squareImg {
+  margin-right: 8px;
+}
+
+.loaderClass {
+  width: 25px;
+  height: 25px;
+  border-width: 3px;
+  border-left-color: #57b993;
+  border-right-color: #57b993;
+  border-bottom-color: #57b993;
+  border-top-color: transparent;
+}
+
+.textCenter {
+  justify-content: center;
+  display: flex;
+  padding: 10px 0px;
+}
+.searchSelectContainer {
+  padding: 8px 0 8px 0;
+}
+
+.searchInput {
+  height: 30px !important;
+}
+
+.searchIcon {
+  width: 22px !important;
+  right: 4px !important;
+  top: 8px !important;
+}
+
+.inputContainerClass {
+  margin: 0 !important;
+  padding: 0 4px;
+}
+.label {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+.checkbox {
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  &::after {
+    left: 3.6px !important;
+    top: -1px !important;
+    width: 4px !important;
+    height: 10px !important;
+  }
+}
+
+.filterSelect {
+  margin: 8px;
+  overflow-y: auto;
+}
+
+.checkBoxContainer {
+  margin: 6px 0;
+  padding-left: 29px;
+}
+.selectAllContainer {
+  margin-bottom: 6px;
+  padding-left: 12px;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+  padding-top: 8px;
+  border-top: 1px solid $borderColor;
+  .btnText {
+    font-size: 12px;
+  }
+}
+
+.firstBtn {
+  margin-left: 20px;
+  width: 70px;
+  height: 30px;
+  display: flex;
+}

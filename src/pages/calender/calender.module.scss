@@ -1,0 +1,184 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.tableHeight {
+  height: calc(100vh - 217px);
+  @media (max-width: $md) {
+    height: calc(100vh - 182px);
+  }
+}
+
+.addBtnDiv {
+  position: absolute;
+  bottom: 10px;
+  z-index: 999;
+  right: 10px;
+  width: 174px;
+  height: 42px;
+  @media (max-width: $md) {
+    display: none;
+  }
+  .addBtnChildDiv {
+    position: fixed;
+  }
+}
+
+.settingsMainPage {
+  background-color: #fafafa;
+  display: flex;
+  margin-top: 10px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.modalWrapper {
+  max-width: 930px !important;
+  max-height: 500px;
+  padding: 0px !important;
+  @media (max-width: $xs) {
+    height: 90vh;
+  }
+  .modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .img {
+      margin-right: 20px;
+      margin-top: -25px;
+    }
+  }
+  .add {
+    @include gridTwo(8, 50);
+    padding: 20px 50px;
+    @media (max-width: $sm) {
+      padding: 20px 20px;
+    }
+    .label {
+      font-size: 16px;
+      color: $header;
+      text-transform: capitalize;
+    }
+
+    .radio {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      .sec {
+        margin-left: 50px;
+      }
+    }
+  }
+
+  .webBtnDiv {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    .btn {
+      padding: 12px 90px;
+      margin: 30px 0px 30px 0;
+      width: 303px;
+      height: 51px;
+    }
+  }
+
+  .mobileBtnDiv {
+    display: none;
+    margin: 30px;
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .mobileBtn {
+      position: relative;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.loaderDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: #fafafa;
+  z-index: 200;
+  .loadingStyle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-color: #57b993;
+    border-top-color: transparent;
+  }
+}
+
+.note {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  label {
+    font-size: 14px;
+    color: #6e6d6d;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: #6e6d6d;
+  }
+
+  textarea {
+    border: 1px solid #d9d9d9;
+    color: #6e6d6d;
+    border-radius: 3px;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    &::placeholder {
+      color: #d6d9d9;
+    }
+  }
+}
+
+.inputLabel {
+  font-size: 14px;
+  color: #6e6d6d;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #6e6d6d;
+}
+
+.dateLabel {
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+}
+
+.customDate {
+  border: none !important;
+  margin-top: 0 !important;
+}
+
+.onRadio {
+  margin-right: 12px;
+}
+
+.customRecursion {
+  display: flex;
+  padding: 10px 0px;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.leftDiv {
+  display: flex;
+  padding: 10px 0px;
+  align-items: center;
+}

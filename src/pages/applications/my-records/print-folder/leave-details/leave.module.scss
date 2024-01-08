@@ -1,0 +1,53 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.leaveInfo {
+  border: 1px solid #a8a8a8;
+  margin-top: 15px;
+  .applicationTitle {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px;
+  }
+  .applicationSubtitle {
+    font-size: 14px;
+    padding: 11px;
+    border-right: 1px solid #a8a8a8;
+    width: 100%;
+    height: 100%;
+  }
+  .flex {
+    @include gridThree(20, 0);
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .leaveCharged {
+    display: flex;
+
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid #a8a8a8;
+
+    ul {
+      flex: 1;
+      padding: 10px 25px;
+      li {
+        margin-bottom: 10px;
+        font-size: 14px;
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+.border {
+  border-top: 1px solid #a8a8a8;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

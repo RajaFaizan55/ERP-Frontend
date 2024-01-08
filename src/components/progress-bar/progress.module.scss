@@ -1,0 +1,51 @@
+@import '/src//styles//colors';
+
+.wrapper {
+  margin-top: 35px;
+  width: 100%;
+  progress {
+    height: 10px;
+    width: 100%;
+    box-shadow: inset 0px 0px 1px 1.5px rgba(0, 0, 0, 0.2);
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
+  progress::-webkit-progress-bar {
+    background-color: transparent;
+    outline: none;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
+  progress::-webkit-progress-value {
+    background-color: $secondary;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+  }
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: capitalize;
+    color: #6e6d6d;
+    margin-top: 10px;
+  }
+}
+
+progress::-moz-progress-bar {
+  background-color: transparent;
+  outline: none;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -o-border-radius: 7px;
+}

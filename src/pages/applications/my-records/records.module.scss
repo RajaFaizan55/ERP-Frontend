@@ -1,0 +1,153 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.recordTableHeight {
+  height: calc(100vh - 225px);
+  padding: 0;
+}
+
+// both modals
+.modalWrapper {
+  max-width: 950px !important;
+  padding: 0px !important;
+  .modal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    .img {
+      // margin-right: -740px;
+      // margin-top: -30px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
+    }
+  }
+  .button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+    .btn {
+      padding: 12px 60px !important;
+      width: 100px;
+    }
+  }
+}
+
+// view record
+.view {
+  padding: 30px 100px;
+  h2 {
+    font-size: 26px;
+    color: #6e6d6d;
+    font-weight: 400;
+  }
+  p {
+    margin: 60px 0px;
+    color: #b9b9b9;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  h5 {
+    color: #b9b9b9;
+    font-size: 16px;
+    font-weight: 200;
+  }
+}
+.icons {
+  display: flex;
+  align-items: center;
+  padding-right: 25px;
+  .pencilIcon {
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .trashIcon {
+    cursor: pointer;
+  }
+}
+
+.btnDiv {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0px 20px 50px 5px;
+  .btn {
+    width: 90px;
+    height: 42px;
+    cursor: pointer;
+    margin-right: 20px;
+    background-color: #ff5050;
+  }
+  .acceptBtn {
+    width: 96px;
+    height: 42px;
+  }
+}
+
+.grid {
+  @include gridTwo(20, 50);
+  .label {
+    font-size: 16px;
+    color: $header;
+
+    text-transform: capitalize;
+  }
+
+  .radio {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    .sec {
+      margin-left: 50px;
+    }
+  }
+  .input {
+    margin-top: 12px;
+  }
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  label {
+    font-size: 16px;
+    color: $header;
+    margin-bottom: 7px;
+    margin-top: 14px;
+  }
+  textarea {
+    border: 1px solid #d9d9d9;
+    color: #6e6d6d;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    &::placeholder {
+      color: #d6d9d9;
+    }
+  }
+}
+
+.loaderDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: #fafafa;
+  z-index: 200;
+  .loadingStyle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-color: #57b993;
+    border-top-color: transparent;
+  }
+}
+
+.viewBtn {
+  margin-right: 5px;
+}

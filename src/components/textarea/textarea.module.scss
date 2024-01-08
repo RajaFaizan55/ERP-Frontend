@@ -1,0 +1,33 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 15px;
+  label {
+    font-size: 14px;
+    color: #6e6d6d;
+    margin-bottom: 10px;
+    font-weight: 500;
+    line-height: 16px;
+    text-transform: capitalize;
+  }
+  textarea {
+    border: 1px solid #d9d9d9;
+    color: #6e6d6d;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    &::placeholder {
+      text-transform: capitalize;
+      color: #d6d9d9;
+    }
+  }
+}
+
+.errorMessage {
+  color: #ff5050;
+  font-size: 12px;
+  position: absolute;
+  bottom: -16px;
+}

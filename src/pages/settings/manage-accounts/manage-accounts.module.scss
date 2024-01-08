@@ -1,0 +1,112 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.manageAccountsTableHeight {
+  height: calc(100vh - 217px);
+  @media (max-width: $md) {
+    height: calc(100vh - 182px);
+  }
+}
+
+.addEmployeeBtnDiv {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 160px;
+  height: 42px;
+  .addEmployeeChildDiv {
+    position: fixed;
+  }
+}
+
+// edit employee
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .imgDiv {
+    .img {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+    }
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 80vh);
+    max-width: 750px;
+    width: 100%;
+    padding: 55px 20px 0 20px;
+    @media (max-width: $md) {
+      padding: 25px 20px 0 20px;
+    }
+
+    .btnDiv {
+      margin: 20px 0;
+      display: flex;
+      justify-content: flex-end;
+      & .button {
+        width: 170px;
+        height: 42px;
+      }
+    }
+    .mobileBtnDiv {
+      display: none;
+      margin: 0px 0px 20px;
+      @media (max-width: $md) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      .mobileBtn {
+        position: relative;
+        left: 0;
+        bottom: 0;
+      }
+    }
+  }
+
+  .grid {
+    // padding: 55px 0px 0px 0px;
+    @include gridTwo(20, 80);
+    .statusDiv {
+      margin-top: 15px;
+      .labelDiv > label {
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #6e6d6d;
+        font-weight: 500;
+      }
+      .radio {
+        display: flex;
+        margin-top: 30px;
+        .sec {
+          margin-left: 50px;
+        }
+      }
+    }
+  }
+}
+
+.loaderDiv {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  inset: 0;
+  background-color: #fafafa;
+  z-index: 200;
+  .loadingStyle {
+    width: 40px;
+    height: 40px;
+    border-width: 3px;
+    border-color: #57b993;
+    border-top-color: transparent;
+  }
+}

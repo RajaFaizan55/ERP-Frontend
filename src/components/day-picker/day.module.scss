@@ -1,0 +1,48 @@
+@import '../../styles/_colors.scss';
+
+.labelDay {
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #6e6d6d;
+  margin-bottom: 10px;
+}
+.hc {
+  display: none;
+}
+.hc + .label {
+  font-size: 16px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    background-color: #57b993;
+    color: white;
+  }
+}
+.hc:checked + label {
+  background-color: #57b993;
+  color: white;
+}
+.bodyWrapper {
+  padding: 10px 0px;
+}
+.errorMessage {
+  color: $danger;
+  font-size: 12px;
+  position: absolute;
+  bottom: -17px;
+}
+.error + .label {
+  border: 1px solid red;
+  color: red;
+}

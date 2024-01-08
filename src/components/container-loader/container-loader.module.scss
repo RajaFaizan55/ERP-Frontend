@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  margin-left: 8px;
+  height: calc(100vh - 72px);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .loaderClass {
+    width: 50px;
+    height: 50px;
+    border-width: 3px;
+    border-left-color: #57b993;
+    border-right-color: #57b993;
+    border-bottom-color: #57b993;
+    border-top-color: transparent;
+  }
+}

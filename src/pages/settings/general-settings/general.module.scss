@@ -1,0 +1,58 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+// general settings
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .imgDiv {
+    .img {
+      position: absolute;
+      top: 25px;
+      right: 30px;
+    }
+    @media (max-width: $md) {
+      display: none;
+    }
+  }
+  .form {
+    max-width: 750px;
+    width: 100%;
+    padding: 55px 20px 0 20px;
+    @media (max-width: $md) {
+      padding: 25px 20px 0 20px;
+    }
+  }
+  .grid {
+    @include gridTwo(20, 80);
+  }
+
+  .webBtnDiv {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 30px;
+    & .button {
+      height: 42px;
+      width: 175px;
+    }
+  }
+
+  .mobileBtnDiv {
+    display: none;
+    margin: 0px 0px 20px;
+    @media (max-width: $md) {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .mobileBtn {
+      position: relative;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}

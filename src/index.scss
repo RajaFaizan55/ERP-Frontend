@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
+@import 'styles/_breakpoints.scss';
+
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  outline: none;
+}
+body {
+  font-family: Roboto;
+  overflow-x: hidden;
+  margin: 0px;
+  @media (max-width: $md) {
+    background-color: #57b993;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 1px solid #d6d4d4;
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d4d4;
+  border: -0 solid hsla(120, 75%, 50%, 1);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #b4b1b1;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+// input::-webkit-calendar-picker-indicator {
+//   display: none;
+// }
+
+.react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+  background-color: #57b993 !important;
+  border-radius: 0px !important;
+}
+
+.react-datepicker__header {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  margin-bottom: 16px;
+}
+
+.fc .fc-scroller-liquid-absolute {
+  overflow-y: hidden !important;
+  height: auto !important;
+}

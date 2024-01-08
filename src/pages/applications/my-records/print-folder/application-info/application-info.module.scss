@@ -1,0 +1,28 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.applicationInfo {
+  border: 1px solid #a8a8a8;
+  margin-top: 15px;
+  .flex {
+    @include gridTwo(20, 0);
+    @media (max-width: $lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .applicationTitle {
+      font-size: 14px;
+      font-weight: bold;
+      padding: 15px;
+    }
+    .applicationSubtitle {
+      font-size: 14px;
+      padding: 11px;
+      border-right: 1px solid #a8a8a8;
+      max-width: 165px;
+    }
+  }
+}
+.border {
+  border-top: 1px solid #a8a8a8;
+}

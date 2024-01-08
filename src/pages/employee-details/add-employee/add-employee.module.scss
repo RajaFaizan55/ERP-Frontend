@@ -1,0 +1,308 @@
+@import 'styles/_colors.scss';
+@import 'styles/_mixin.scss';
+@import 'styles/_breakpoints.scss';
+
+.flex {
+  display: flex;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  margin-right: 8px;
+  .button1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    width: 40px;
+    box-shadow: none;
+    & img {
+      margin-left: 0;
+    }
+  }
+
+  .button2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    margin-right: 10px;
+    border-radius: 50%;
+    padding: 0;
+    width: 42px;
+    background-color: #fff;
+    border: 1px solid $text;
+    box-shadow: none;
+  }
+  span {
+    margin-left: 8px;
+    margin-right: 8px;
+    color: $text;
+  }
+}
+
+// personal info
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .form {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 39vh);
+    @media (max-width: $md) {
+      width: 100%;
+      padding: 0px 40px;
+    }
+    @media (max-width: $sm) {
+      width: 100%;
+      padding: 0px 0px;
+      min-height: calc(100vh - 30vh);
+    }
+  }
+  .grid {
+    padding: 55px 0px 10px 0px;
+    @include gridTwo(4, 80);
+
+    .radio {
+      display: flex;
+      align-items: center;
+      margin-top: 7px;
+      .sec {
+        margin-left: 50px;
+      }
+    }
+    .label {
+      font-size: 16px;
+      color: $header;
+      text-transform: capitalize;
+    }
+    .btn {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 30px;
+    }
+  }
+}
+
+// address info
+
+.padding {
+  padding: 40px 100px 0px 100px;
+  @media (max-width: 1200px) {
+    padding: 50px 10px;
+  }
+  @media (max-width: $md) {
+    padding: 50px;
+  }
+  @media (max-width: $sm) {
+    padding: 0px;
+  }
+  .form2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: calc(100vh - 30vh);
+  }
+}
+.form1 {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: calc(100vh - 25vh);
+
+  h1 {
+    color: #8b8b8b;
+    font-size: 18px;
+    margin: 3px 0px;
+    font-weight: 500;
+  }
+
+  .heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .checkBoxLabel {
+      margin-bottom: 0px;
+      @media (max-width: $sm) {
+        display: none;
+      }
+    }
+  }
+
+  .grid1 {
+    @include gridThree(10, 60);
+
+    @media (max-width: $lg) {
+      grid-gap: 20px 10px;
+    }
+    .second {
+      grid-column: 2/-1;
+      @media (max-width: $lg) {
+        grid-column: 1/-1;
+      }
+    }
+  }
+}
+
+// payroll
+.grid3 {
+  .dataListOptions {
+    font-size: 1px;
+  }
+  @include gridThree(15, 60);
+  @media (max-width: $lg) {
+    grid-gap: 20px 10px;
+  }
+}
+
+// company
+.companyForm {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  min-height: calc(100vh - 25vh);
+}
+
+// educational
+.add {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  margin-top: 45px;
+  img {
+    width: 16px;
+    height: 16px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $header;
+    margin-left: 10px;
+    margin-bottom: 0px;
+  }
+}
+
+.note {
+  grid-row: 3 / span 4;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: $lg) {
+    grid-row: 3 / span 2;
+  }
+  label {
+    font-size: 16px;
+    color: $header;
+    margin-bottom: 7px;
+    margin-top: 14px;
+  }
+  textarea {
+    border: 1px solid #d9d9d9;
+    color: #6e6d6d;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    height: 100%;
+    &::placeholder {
+      color: #d6d9d9;
+    }
+  }
+}
+.checkbox {
+  margin-top: 40px;
+}
+
+.img {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  @media (max-width: 1135px) {
+    top: 62px;
+  }
+  @media (max-width: $md) {
+    top: 20px;
+  }
+  @media (max-width: $sm) {
+    top: 20px;
+    right: 15px;
+  }
+}
+
+.educationTableHeight {
+  height: 300px;
+}
+
+.navLinksMd {
+  @media (max-width: $md) {
+    display: none;
+  }
+}
+.navLinksSm {
+  display: none;
+  @media (max-width: $md) {
+    display: block;
+  }
+  h6 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin: 27px 18px 0px 15px;
+    color: #6e6d6d;
+  }
+}
+
+.paddingLinks {
+  padding: 20px 40px;
+  @media (max-width: $sm) {
+    padding: 20px 20px;
+  }
+}
+
+.buttonEducation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  width: 40px;
+  box-shadow: none;
+  & img {
+    margin-left: 0px !important;
+  }
+}
+
+.btnEducation {
+  background-color: #a8a8a8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  width: 40px;
+  box-shadow: none;
+  border: 1px solid #b9b9b9;
+  & img {
+    margin-left: 0px !important;
+  }
+}

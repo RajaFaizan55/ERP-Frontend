@@ -1,0 +1,74 @@
+.navLinksContainer {
+  max-width: 830px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  .navWidth {
+    display: flex;
+    height: fit-content;
+  }
+
+  &::-webkit-scrollbar:horizontal {
+    display: none;
+  }
+}
+
+.navLink {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  left: -15px;
+  top: -11px;
+  align-items: center;
+  height: fit-content;
+  border: none;
+  background-color: transparent;
+  align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 35;
+}
+
+.navLinkTitle {
+  left: 16px;
+  top: 28px;
+  position: absolute;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 2;
+  font-weight: 500;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.navLinkIcon {
+  position: relative;
+  height: fit-content;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navLinkOther {
+  cursor: pointer;
+  left: -65px;
+  z-index: 35;
+  &:nth-child(1) {
+    z-index: 95;
+  }
+  &:nth-child(2) {
+    z-index: 32;
+    left: -73px;
+  }
+  &:nth-child(3) {
+    z-index: 30;
+    left: -134px;
+  }
+  &:nth-child(4) {
+    z-index: 25;
+    left: -197px;
+  }
+  &:nth-child(5) {
+    z-index: 20;
+    left: -257px;
+  }
+}
